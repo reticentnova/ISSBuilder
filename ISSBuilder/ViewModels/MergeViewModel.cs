@@ -6,7 +6,7 @@ namespace ISSBuilder.ViewModels
     public class MergeViewModel
     {
         public MergeModel Merge { get; set; }
-        public ICommand AddLaneCommand { get; }
+        public ICommand ExportCommand { get; }
 
         public MergeViewModel()
         {
@@ -20,6 +20,14 @@ namespace ISSBuilder.ViewModels
                 NumLanes = 5,
                 RecircID = 1
             };
+
+
+            //Bound to Export button in UI. 
+            ExportCommand = new RelayCommand(Export);
+            void Export()
+            {
+                Logic.ExportLogic();
+            }
         }
     }
 }

@@ -28,6 +28,7 @@
             <TextBox/>
             <TextBlock HorizontalAlignment="Center">FA_ISS_BD</TextBlock>
             <TextBox/>
+            <Button Content="Export Logic" Command="{Binding ExportCommand}"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1">
