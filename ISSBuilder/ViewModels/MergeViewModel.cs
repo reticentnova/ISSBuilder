@@ -26,7 +26,7 @@ namespace ISSBuilder.ViewModels
             ExportCommand = new RelayCommand(Export);
             void Export()
             {
-                Logic.ExportLogic();
+                Logic.ExportLogic(Merge);
             }
         }
     }
