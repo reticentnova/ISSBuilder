@@ -59,6 +59,7 @@
     <Compile Include="FA_ISS_BD.cs" />
     <Compile Include="FA_ISS_C.cs" />
     <Compile Include="RelayCommand.cs" />
+    <Compile Include="UIdTracker.cs" />
     <Compile Include="ViewModels\MergeViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
