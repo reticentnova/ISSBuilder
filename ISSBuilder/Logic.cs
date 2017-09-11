@@ -23,8 +23,10 @@ namespace ISSBuilder
             UIdTracker UIds = new UIdTracker(L5X);
 
             //test to make sure this method executes.
-            FA_ISS_C mc = new FA_ISS_C("MC", UIds.generateUId(), merge.NumLanes, merge.RecircID);
-            FA_ISS_BD bed = new FA_ISS_BD("BD", UIds.generateUId());
+            FA_ISS_C mc = new FA_ISS_C("MC", UIds, merge);
+            mc.DefineAOI();
+            FA_ISS_BD bed = new FA_ISS_BD("BD", UIds);
+            bed.CreateBlock("lienlsi");
 
 
         }
