@@ -8,11 +8,13 @@ namespace ISSBuilder
     {
         public int NumLanes { get; set; }
         public int RecircLane { get; set; }
+        private string MCUID { get; set; }
 
         public FA_ISS_C(string tagName, UIdTracker uidtracker, MergeModel merge)
         {
             this.TagName = tagName;
             this.UID = uidtracker.generateUId();
+            this.MCUID = uidtracker.mcUId;
             this.NumLanes = merge.NumLanes;
             this.RecircLane = merge.RecircID;
 
@@ -36,10 +38,10 @@ namespace ISSBuilder
             return newNode;
         }
 
-        public override String CreateBlock(string mcUID)
+        public override String CreateBlock()
         {
             //return "FA_ISS_C(@" + this.UID + "@,@" + mcUID + "@)";
-            return String.Format("FA_ISS_C(@{0}@,@{1}@)", this.UID, mcUID);
+            return String.Format("FA_ISS_C(@{0}@,@{1}@)", this.UID, this.MCUID);
         }
     }
 }

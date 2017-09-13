@@ -9,6 +9,6 @@ namespace ISSBuilder
         public string UID { get; set; }
 
         public abstract XElement DefineAOI();
-        public abstract String CreateBlock(string mcUID);
+        public abstract String CreateBlock();
     }
 }

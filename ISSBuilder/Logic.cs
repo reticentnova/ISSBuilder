@@ -26,7 +26,7 @@ namespace ISSBuilder
             FA_ISS_C mc = new FA_ISS_C("MC", UIds, merge);
             mc.DefineAOI();
             FA_ISS_BD bed = new FA_ISS_BD("BD", UIds);
-            bed.CreateBlock("lienlsi");
+            bed.CreateBlock();
 
 
         }
