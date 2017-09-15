@@ -24,10 +24,10 @@
             <TextBlock HorizontalAlignment="Center">Recirc Lane</TextBlock>
             <TextBox Text="{Binding Merge.RecircID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
-            <TextBlock HorizontalAlignment="Center">FA_ISS_MC</TextBlock>
-            <TextBox/>
+            <TextBlock HorizontalAlignment="Center">FA_ISS_C</TextBlock>
+            <TextBox Text="{Binding ProgramModel.FA_ISS_C, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             <TextBlock HorizontalAlignment="Center">FA_ISS_BD</TextBlock>
-            <TextBox/>
+            <TextBox Text="{Binding ProgramModel.FA_ISS_BD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             <Button Content="Export Logic" Command="{Binding ExportCommand}"/>
         </StackPanel>
 

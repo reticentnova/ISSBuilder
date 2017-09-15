@@ -38,7 +38,7 @@ namespace ISSBuilder.Models
         public MergeModel()
         {
             Lanes = new ObservableCollection<LaneModel>();
-            MergeBeltName = "UXXXXXX";
+            MergeBeltName = "U100000";
         }
 
         private void ConstructLaneList()

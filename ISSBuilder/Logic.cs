@@ -15,7 +15,7 @@ namespace ISSBuilder
     ///         to generate.</param>
     public class Logic
     {
-        public static void ExportLogic(MergeModel merge)
+        public static void ExportLogic(MergeModel merge, MergeProgramModel program)
         {
             //Load the ISS Template L5X file
             XDocument L5X = XDocument.Load("C:\\Users\\frantzgj\\Downloads\\ISS_Template.L5X");
@@ -23,9 +23,9 @@ namespace ISSBuilder
             UIdTracker UIds = new UIdTracker(L5X);
 
             //test to make sure this method executes.
-            FA_ISS_C mc = new FA_ISS_C("MC", UIds, merge);
+            FA_ISS_C mc = new FA_ISS_C(program.FA_ISS_C, UIds, merge);
             mc.DefineAOI();
-            FA_ISS_BD bed = new FA_ISS_BD("BD", UIds);
+            FA_ISS_BD bed = new FA_ISS_BD(program.FA_ISS_BD, UIds);
             bed.CreateBlock();
 
 

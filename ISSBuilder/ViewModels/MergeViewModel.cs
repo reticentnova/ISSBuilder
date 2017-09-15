@@ -6,6 +6,7 @@ namespace ISSBuilder.ViewModels
     public class MergeViewModel
     {
         public MergeModel Merge { get; set; }
+        public MergeProgramModel ProgramModel { get; set; }
         public ICommand ExportCommand { get; }
 
         public MergeViewModel()
@@ -21,12 +22,14 @@ namespace ISSBuilder.ViewModels
                 RecircID = 1
             };
 
+            ProgramModel = new MergeProgramModel();
+
 
             //Bound to Export button in UI. 
             ExportCommand = new RelayCommand(Export);
             void Export()
             {
-                Logic.ExportLogic(Merge);
+                Logic.ExportLogic(Merge, ProgramModel);
             }
         }
     }
