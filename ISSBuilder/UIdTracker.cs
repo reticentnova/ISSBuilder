@@ -5,7 +5,7 @@ using System.Xml.Linq;
 
 namespace ISSBuilder
 {
-    class UIdTracker
+    public class UIdTracker
     {
         protected List<string> UIds = new List<string>();
         public String newUId;

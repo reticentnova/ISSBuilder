@@ -55,11 +55,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AOI.cs" />
+    <Compile Include="FA_ISS_LN.cs" />
     <Compile Include="Logic.cs" />
     <Compile Include="FA_ISS_BD.cs" />
     <Compile Include="FA_ISS_C.cs" />
     <Compile Include="Models\MergeProgramModel.cs" />
     <Compile Include="RelayCommand.cs" />
+    <Compile Include="RoutineBuilder.cs" />
+    <Compile Include="RungBuilder.cs" />
     <Compile Include="UIdTracker.cs" />
     <Compile Include="ViewModels\MergeViewModel.cs" />
     <Page Include="MainWindow.xaml">

@@ -14,7 +14,7 @@ namespace ISSBuilder
         }
         public override XElement DefineAOI()
         {
-            XElement newNode = new XElement("Tag", new XAttribute("Name", this.TagName), new XAttribute("TagType", "Base"), new XAttribute("DataType", "FA_ISS_BD"), new XAttribute("UId", this.UID),
+            XElement newNode = new XElement("Tag", new XAttribute("Name", this.TagName), new XAttribute("Constant", "false"), new XAttribute("ExternalAccess", "Read/Write"), new XAttribute("TagType", "Base"), new XAttribute("DataType", "FA_ISS_BD"), new XAttribute("UId", this.UID),
                 new XElement("Data", "01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\r\n " +
                 "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\r\n " +
                 "00 00 00 00 00 00 00 00")
