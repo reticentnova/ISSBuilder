@@ -21,7 +21,17 @@ namespace ISSBuilder.Models
             set { OnPropertyChanged(ref _fa_iss_bd, value); }
         }
 
-        //Need to hold all FA_ISS_* objects in this class.
+        //Temp to test choosing file to import. Will choose based on radio boxes or check boxes in future.
+        private string _aoitoimport;
+        public string AOITOIMPORT
+        {
+            get
+            { return _aoitoimport; }
+            set
+            { OnPropertyChanged(ref _aoitoimport, value); }
+        }
+
+        //TODO - Need to hold all FA_ISS_* objects in this class.
         private ObservableCollection<FA_ISS_LN> _lanes;
         public ObservableCollection<FA_ISS_LN> Lanes
         {

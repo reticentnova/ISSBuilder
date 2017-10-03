@@ -36,7 +36,7 @@ namespace ISSBuilder.ViewModels
             ImportAOI = new RelayCommand(Import);
             void Import()
             {
-                Logic.ImportAOI();
+                Logic.ImportAOI(ProgramModel);
             }
         }
     }

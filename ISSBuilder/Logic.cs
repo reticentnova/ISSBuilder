@@ -90,9 +90,10 @@ namespace ISSBuilder
             //TODO: Ask for filename before saving
             L5X.Save("C:\\Users\\frantzgj\\Downloads\\ISS_LN_CONFIG.L5X");
         }
-        public static void ImportAOI()
+        public static void ImportAOI(MergeProgramModel program)
         {
-            XDocument source = XDocument.Load("C:\\Users\\frantzgj\\Downloads\\AOI.L5X");
+            string importme = program.AOITOIMPORT;
+            XDocument source = XDocument.Load(string.Format("C:\\Users\\frantzgj\\Downloads\\{0}.L5X", importme));
             XDocument dest = XDocument.Load("C:\\Users\\frantzgj\\Downloads\\TEMPLATE.L5X");
 
             XElement AOIs = dest.Elements("RSLogix5000Content").Elements("Controller").Elements("AddOnInstructionDefinitions").Single();
