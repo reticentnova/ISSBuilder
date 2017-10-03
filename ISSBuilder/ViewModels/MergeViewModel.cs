@@ -8,6 +8,7 @@ namespace ISSBuilder.ViewModels
         public MergeModel Merge { get; set; }
         public MergeProgramModel ProgramModel { get; set; }
         public ICommand ExportCommand { get; }
+        public ICommand ImportAOI { get; }
 
         public MergeViewModel()
         {
@@ -30,6 +31,12 @@ namespace ISSBuilder.ViewModels
             void Export()
             {
                 Logic.ExportLogic(Merge, ProgramModel);
+            }
+
+            ImportAOI = new RelayCommand(Import);
+            void Import()
+            {
+                Logic.ImportAOI();
             }
         }
     }

@@ -29,6 +29,7 @@
             <TextBlock HorizontalAlignment="Center">FA_ISS_BD</TextBlock>
             <TextBox Text="{Binding ProgramModel.FA_ISS_BD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             <Button Content="Export Logic" Command="{Binding ExportCommand}"/>
+            <Button Content="Import AOIs" Command="{Binding ImportAOI}"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1">

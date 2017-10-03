@@ -20,12 +20,14 @@ namespace ISSBuilder.Models
             get { return _fa_iss_bd; }
             set { OnPropertyChanged(ref _fa_iss_bd, value); }
         }
-       // private ObservableCollection<LaneModel> _lanes;
-       // public ObservableCollection<LaneModel> Lanes
-       // {
-       //     get { return _lanes; }
-       //     set { OnPropertyChanged(ref _lanes, value); }
-       // }
+
+        //Need to hold all FA_ISS_* objects in this class.
+        private ObservableCollection<FA_ISS_LN> _lanes;
+        public ObservableCollection<FA_ISS_LN> Lanes
+        {
+            get { return _lanes; }
+            set { OnPropertyChanged(ref _lanes, value); }
+        }
 
         public MergeProgramModel()
         {

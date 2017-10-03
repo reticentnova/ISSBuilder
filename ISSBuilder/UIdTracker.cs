@@ -52,6 +52,6 @@ namespace ISSBuilder
                 UIds.Add(newUId);
                 return newUId;
             }
-;        }
+        }
     }
 }

@@ -24,7 +24,6 @@ namespace ISSBuilder
 
         public override String CreateBlock()
         {
-            //return "FA_ISS_BD(@" + this.UID + "@,@" + mcUID + "@,@" + this.UID + "@.PE_MP" + ",@" + this.UID + "@.OK" + ",@" + this.UID + "@.REL_ENA" + ",@" + this.UID + "@.CURR_VEL" + ",@" + this.UID + "@.PPI_CNT" + ",@" + this.UID + "@.AGL" + ",@" + this.UID + "@.RES_COUNTS" + ")";
             return String.Format("FA_ISS_BD(@{0}@,@{1}@,@{0}@.PE_MP,@{0}@.OK,@{0}@.REL_ENA,@{0}@.CURR_VEL," +
                 "@{0}@.PPI_CNT,@{0}@.AGL,@{0}@.RES_COUNTS)", this.UID, this.MCUID);
 
